@@ -5,12 +5,13 @@
 
 void ErrorMessageBox(const DWORD& dwError)
 {
+	LPTSTR lpszError = NULL;
 	DWORD dwFlag = FORMAT_MESSAGE_FROM_SYSTEM |
 		FORMAT_MESSAGE_ALLOCATE_BUFFER |
 		FORMAT_MESSAGE_IGNORE_INSERTS;
-	DWORD dwLocale = makelandid(LANG_NEUTRAL, SUBLANG_NEUTRAL);
+	DWORD dwLocale = MAKELANGID(LANG_NEUTRAL, SUBLANG_NEUTRAL);
 
-	DWORD dwRet = ::FormatMessage(dwFlag, NULL, dwEror, dwLocale, lpszError, 0, NULL);
+	DWORD dwRet = ::FormatMessage(dwFlag, NULL, dwError, dwLocale, lpszError, 0, NULL);
 
 	if(dwRet && lpszError)
 	{

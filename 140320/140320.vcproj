@@ -174,16 +174,16 @@
 				RelativePath=".\winmain (1).cpp"
 				>
 			</File>
-			<File
-				RelativePath=".\winmain.cpp"
-				>
-			</File>
 		</Filter>
 		<Filter
 			Name="헤더 파일"
 			Filter="h;hpp;hxx;hm;inl;inc;xsd"
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
+			<File
+				RelativePath=".\utility.h"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="리소스 파일"
